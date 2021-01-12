@@ -5,4 +5,4 @@
 
 source /usr/local/etc/local-ports.conf
 
-nmap `ip route get 1.1.1.1 | grep -oP 'src \K\S+'` >> ${logdir}/${logfile}
+/bin/nmap `/sbin/ip route get 1.1.1.1 | /bin/grep -oP 'src \K\S+'` >> ${logdir}/${logfile}
