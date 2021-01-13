@@ -20,7 +20,7 @@ Requires: logrotate
 BuildRoot: ~/rpmbuild/
 
 # Build with the following syntax:
-# rpmbuild --target noarch -bb local-ports.spec
+# rpmbuild --target noarch-unknown-linux -bb local-ports.spec
 
 %description
 A port monitor script for testing RPM creation.
@@ -85,7 +85,6 @@ fi
 # uninstalled.                                                                 #
 ################################################################################
 %postun
-# Restore the original MOTD if it was backed up
 if [ -e /etc/cron.d/local-ports.rpmorig ]; then
   mv /etc/cron.d/local-ports.rpmorig /etc/cron.d/local-ports
 fi
