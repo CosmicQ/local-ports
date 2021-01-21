@@ -6,11 +6,11 @@
 #
 Summary: Port monitor for testing RPM creation
 Name: local-ports
-Version: 1.0.0
+Version: 1.0.1
 Release: 1
 License: MIT
 URL: https://github.com/CosmicQ/local-ports
-Group: System
+Group: MyMonitors
 Packager: CosmicQ
 Requires: bash
 Requires: iproute
@@ -98,6 +98,8 @@ rm -rf $RPM_BUILD_ROOT/usr/local/bin
 rm -rf $RPM_BUILD_ROOT/usr/local/etc
 
 %changelog
+* Thu Jan 21 2021 Jason Qualkenbush <cosmicq@cosmicegg.net> - 1.0.1
+- Update to change the group to MyMonitors
 * Tue Jan 12 2021 Jason Qualkenbush <cosmicq@cosmicegg.net> - 1.0.0
 - Initial build
 - Example second item in the changelog for version-release 1.0.0
